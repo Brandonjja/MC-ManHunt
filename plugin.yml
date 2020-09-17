@@ -3,3 +3,8 @@ version: 1.0
 main: com.brandonjja.manhunt.ManHunt
 author: Brandonjja
 description: Can you beat the game before you get hunted?
+commands:
+    setrole:
+        usage: /setrole <roleName>
+    role:
+        usage: /role
