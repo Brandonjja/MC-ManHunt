@@ -6,11 +6,13 @@ import org.bukkit.event.Listener;
 import com.brandonjja.manhunt.ManHunt;
 import com.brandonjja.manhunt.listeners.player.PlayerConnectionListener;
 import com.brandonjja.manhunt.listeners.player.PlayerDeathListener;
+import com.brandonjja.manhunt.listeners.player.PlayerDropCompassListener;
 
 public class ListenerManager {
 	public static void registerListeners() {
 		register(new PlayerConnectionListener());
 		register(new PlayerDeathListener());
+		register(new PlayerDropCompassListener());
 	}
 	
 	private static void register(Listener listener) {
