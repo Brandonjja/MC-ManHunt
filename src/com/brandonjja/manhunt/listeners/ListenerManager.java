@@ -13,6 +13,7 @@ public class ListenerManager {
 		register(new PlayerConnectionListener());
 		register(new PlayerDeathListener());
 		register(new PlayerDropCompassListener());
+		register(new CompassClickListener());
 	}
 	
 	private static void register(Listener listener) {
