@@ -14,6 +14,7 @@ public class ListenerManager {
 		register(new PlayerDeathListener());
 		register(new PlayerDropCompassListener());
 		register(new CompassClickListener());
+		register(new GiveCommandListener());
 	}
 	
 	private static void register(Listener listener) {
