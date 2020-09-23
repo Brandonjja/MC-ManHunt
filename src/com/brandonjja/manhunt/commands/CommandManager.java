@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 
 import com.brandonjja.manhunt.commands.handler.RoleCommand;
 import com.brandonjja.manhunt.commands.handler.SetRoleCommand;
+import com.brandonjja.manhunt.commands.handler.WhoCommand;
 
 public class CommandManager implements CommandExecutor {
 	
@@ -27,6 +28,7 @@ public class CommandManager implements CommandExecutor {
 	public static void registerCommands() {
 		commandList.put("setrole", new SetRoleCommand());
 		commandList.put("role", new RoleCommand());
+		commandList.put("who", new WhoCommand());
 		
 		for (String cmdLabel : commandList.keySet()) {
 			register(cmdLabel, new CommandManager());
