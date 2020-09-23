@@ -8,3 +8,5 @@ commands:
         usage: /setrole <roleName>
     role:
         usage: /role
+    who:
+        usage: /who
