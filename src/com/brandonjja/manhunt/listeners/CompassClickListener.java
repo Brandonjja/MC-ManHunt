@@ -16,7 +16,7 @@ import com.brandonjja.manhunt.roles.Role;
 public class CompassClickListener implements Listener {
 	
 	private Player track(Player p) {
-		double dis = Double.POSITIVE_INFINITY;
+		double minDistanceFound = Double.POSITIVE_INFINITY;
 		Player target = null;
 		
 		for (Player pl : Bukkit.getOnlinePlayers()) {
@@ -25,10 +25,10 @@ public class CompassClickListener implements Listener {
 				continue;
 			}
 			double distanceTo = p.getLocation().distance(pl.getLocation());
-			if (distanceTo > dis) {
+			if (distanceTo > minDistanceFound) {
 				continue;
 			}
-			dis = distanceTo;
+			minDistanceFound = distanceTo;
 			target = pl;
 		}
 		if (target == null) {
@@ -48,8 +48,6 @@ public class CompassClickListener implements Listener {
 				player.setCompassTarget(loc);
 				player.sendMessage(ChatColor.GREEN + "Currently Tracking: " + ChatColor.AQUA + target.getName());
 			} else {
-				Location loc = new Location(player.getWorld(), 0, 0, 0);
-				player.setCompassTarget(loc);
 				player.sendMessage(ChatColor.RED + "No players found!");
 			}
 		}
