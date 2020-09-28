@@ -13,7 +13,7 @@ public class RoleCommand extends ManHuntCommand {
 	@Override
 	public boolean execute(Player player, String[] args) {
 		PlayerMH mhPlayer = ManHunt.getPlayer(player);
-		player.sendMessage(ChatColor.GREEN + "You are current a(n): " + ChatColor.AQUA + mhPlayer.getRole());
+		player.sendMessage(ChatColor.GREEN + "You are currently a(n): " + ChatColor.AQUA + mhPlayer.getRole());
 		return true;
 	}
 	
