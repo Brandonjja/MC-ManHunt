@@ -24,14 +24,19 @@ public class CompassClickListener implements Listener {
 			if (pl.equals(p) || mhPlayer.getRole() != Role.RUNNER) {
 				continue;
 			}
-			double distanceTo = p.getLocation().distance(pl.getLocation());
+			double distanceTo;
+			try {
+				distanceTo = p.getLocation().distance(pl.getLocation());
+			} catch (IllegalArgumentException ex) {
+				distanceTo = Double.POSITIVE_INFINITY;
+			}
 			if (distanceTo > minDistanceFound) {
 				continue;
 			}
 			minDistanceFound = distanceTo;
 			target = pl;
 		}
-		if (target == null) {
+		if (target == null || minDistanceFound == Double.POSITIVE_INFINITY) {
 			return null;
 		} else {
 			return target;
