@@ -4,6 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 
 import com.brandonjja.manhunt.ManHunt;
+import com.brandonjja.manhunt.listeners.mobs.EndermanDeathListener;
+import com.brandonjja.manhunt.listeners.mobs.MobSpawnListener;
 import com.brandonjja.manhunt.listeners.player.PlayerConnectionListener;
 import com.brandonjja.manhunt.listeners.player.PlayerDeathListener;
 import com.brandonjja.manhunt.listeners.player.PlayerDropCompassListener;
@@ -14,6 +16,8 @@ public class ListenerManager {
 		register(new PlayerDeathListener());
 		register(new PlayerDropCompassListener());
 		register(new CompassClickListener());
+		register(new EndermanDeathListener());
+		register(new MobSpawnListener());
 		register(new GiveCommandListener());
 	}
 	
