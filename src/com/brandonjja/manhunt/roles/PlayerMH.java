@@ -26,6 +26,9 @@ public class PlayerMH {
 		}
 	}
 	
+	public Player getPlayer() {
+		return player;
+	}
 	
 	private void giveCompass(Player player) {
 		if (!player.getInventory().contains(Material.COMPASS)) {
