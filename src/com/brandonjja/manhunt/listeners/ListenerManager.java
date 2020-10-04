@@ -7,12 +7,14 @@ import com.brandonjja.manhunt.ManHunt;
 import com.brandonjja.manhunt.listeners.mobs.EndermanDeathListener;
 import com.brandonjja.manhunt.listeners.mobs.MobSpawnListener;
 import com.brandonjja.manhunt.listeners.player.PlayerConnectionListener;
+import com.brandonjja.manhunt.listeners.player.PlayerDamageListener;
 import com.brandonjja.manhunt.listeners.player.PlayerDeathListener;
 import com.brandonjja.manhunt.listeners.player.PlayerDropCompassListener;
 
 public class ListenerManager {
 	public static void registerListeners() {
 		register(new PlayerConnectionListener());
+		register(new PlayerDamageListener());
 		register(new PlayerDeathListener());
 		register(new PlayerDropCompassListener());
 		register(new CompassClickListener());
