@@ -10,3 +10,7 @@ commands:
         usage: /role
     who:
         usage: /who
+    pause:
+        usage: /pause
+    p:
+        usage: /p

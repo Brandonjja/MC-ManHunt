@@ -9,6 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.brandonjja.manhunt.commands.handler.PauseCommand;
 import com.brandonjja.manhunt.commands.handler.RoleCommand;
 import com.brandonjja.manhunt.commands.handler.SetRoleCommand;
 import com.brandonjja.manhunt.commands.handler.WhoCommand;
@@ -29,6 +30,8 @@ public class CommandManager implements CommandExecutor {
 		commandList.put("setrole", new SetRoleCommand());
 		commandList.put("role", new RoleCommand());
 		commandList.put("who", new WhoCommand());
+		commandList.put("pause", new PauseCommand());
+		commandList.put("p", new PauseCommand());
 		
 		for (String cmdLabel : commandList.keySet()) {
 			register(cmdLabel, new CommandManager());

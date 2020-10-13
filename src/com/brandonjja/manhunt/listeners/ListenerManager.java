@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 
 import com.brandonjja.manhunt.ManHunt;
+import com.brandonjja.manhunt.commands.handler.PauseCommand;
 import com.brandonjja.manhunt.listeners.mobs.EndermanDeathListener;
 import com.brandonjja.manhunt.listeners.mobs.MobSpawnListener;
 import com.brandonjja.manhunt.listeners.player.PlayerConnectionListener;
@@ -21,6 +22,8 @@ public class ListenerManager {
 		register(new EndermanDeathListener());
 		register(new MobSpawnListener());
 		register(new GiveCommandListener());
+		
+		register(new PauseCommand());
 	}
 	
 	private static void register(Listener listener) {
